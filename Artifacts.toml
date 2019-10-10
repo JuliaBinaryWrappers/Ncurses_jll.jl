@@ -1,113 +1,113 @@
 [[Ncurses]]
 arch = "x86_64"
-git-tree-sha1 = "05c6359c8b53ec3215f809fec028ee69fdd62956"
+git-tree-sha1 = "78f0b3b479eecf37552dce9b6b8d4b6004799e81"
 os = "macos"
 
     [[Ncurses.download]]
-    sha256 = "392c0ea7108168648bea0a745ca668d8228a6ebfda96d0848d8cc9d1ebe82f90"
+    sha256 = "53815ff33a9700898ca0a608a7f4242174cc84b0252adf00d365ddcd07913559"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.x86_64-apple-darwin14.tar.gz"
 [[Ncurses]]
 arch = "i686"
-git-tree-sha1 = "767d1e3fc3446e6868d3f7392e70f7c807193dc9"
+git-tree-sha1 = "84ed60d03a6d5c339a5178b0f0b4d936b393e60c"
 libc = "glibc"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "01cbbd35ffae5753bd9cb7bd51cc71d2a92d5cbf90b4dbea9f612830e787611a"
+    sha256 = "502c246126ccbe653870e4bf42ae1ab322a58f1d0e3e700d2e5f3c37bf1ad0ce"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.i686-linux-gnu.tar.gz"
 [[Ncurses]]
 arch = "x86_64"
-git-tree-sha1 = "885f7fe3df9d44c84b183885aa47331f5e2bc781"
+git-tree-sha1 = "0d08138f690233317b5c388b2742f9c0660eab36"
 os = "freebsd"
 
     [[Ncurses.download]]
-    sha256 = "b238de12782b24a74228bda796f20db4aa789daadeb81944ea2fa2f9abbafd66"
+    sha256 = "ada76492fdda9584f09a27215e3a9c9224105afd0624e830cf35309262e7473a"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.x86_64-unknown-freebsd11.1.tar.gz"
 [[Ncurses]]
 arch = "powerpc64le"
-git-tree-sha1 = "a2648fc8a60c272e91fdf1ec51def2328e971eb9"
+git-tree-sha1 = "29ccdb0c426820ee8c3a04e2054d43e1ccd791e8"
 libc = "glibc"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "e94b313f6b67acf6fd0e7346756fba998efaa50a5ee835c5b721f2fdb4befeca"
+    sha256 = "076641d628cf150c0558133c9ae4d5023150823be24ca1b30f05e5eb728991ad"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.powerpc64le-linux-gnu.tar.gz"
 [[Ncurses]]
 arch = "x86_64"
-git-tree-sha1 = "1f74aafdd1bb434b04109114c3c6b6cad8c9a6da"
+git-tree-sha1 = "c0e09158629a3cae40ba99c5982299b9b96d18e3"
 libc = "musl"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "a2947950b5840e185c9f7dd497be90f7cac6cbbaf3733b05951831933e56e94b"
+    sha256 = "e993de89a37ea3025a9edbf63a33ad1eeee8edaf6bb4e94fb8a85e25a66739f1"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.x86_64-linux-musl.tar.gz"
 [[Ncurses]]
 arch = "x86_64"
-git-tree-sha1 = "8303996ee220a5174f1b989fe0560ca9eab347dd"
+git-tree-sha1 = "fbb763eaddef6702b5fdceeacc23db51fb2d09bd"
 libc = "glibc"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "1608d6a0bffdf6a6d6708e23a0959edb2b5faa7811cdd54e3f532eb8f07ad6b8"
+    sha256 = "085db33b81a7675d36eb67ffde66599ab544f7a07bba6e80389d4f5bf1a4ef59"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.x86_64-linux-gnu.tar.gz"
 [[Ncurses]]
 arch = "x86_64"
-git-tree-sha1 = "4e4d8202ca5d8a028e13b67ca523c0b46cfc2cf7"
+git-tree-sha1 = "4437a039fe502a84eca86bf1f0b404c121c6b709"
 os = "windows"
 
     [[Ncurses.download]]
-    sha256 = "a5f0485a77399fa3c44636f5e210c2607704549614e224fef3f081e425dbf6e5"
+    sha256 = "946cc2e7168c837f5d63df148371b452593447f308e9034d974565bb5acc8608"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.x86_64-w64-mingw32.tar.gz"
 [[Ncurses]]
 arch = "aarch64"
-git-tree-sha1 = "5986de6b6bb3477c0ba3a62e2df8a5d2ccde8232"
+git-tree-sha1 = "0269ec84cd401506ce37c85568d624dc1a48e627"
 libc = "musl"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "bdd6709e6bbb2dd5f876954a5a0564c415ec2ca51b48a1224ad1717f4b622eb5"
+    sha256 = "53ade4dc903c3ba6a2fe2515ea574931136c156f5c60be7d0aff3a93e265ddf6"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.aarch64-linux-musl.tar.gz"
 [[Ncurses]]
 arch = "armv7l"
-git-tree-sha1 = "9c0f110840039bccd2a5ce55e087790f5f46c719"
+git-tree-sha1 = "908bdcb710d847e49b069cfc695e58a128fd2472"
 libc = "glibc"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "7f16a43c2fca13b5556ec2855508bb6e052b7d5b4b3296ca789c269adeefa76d"
+    sha256 = "56e224c62dadc00bf8d57cdba597df77e2835dc5583fcdd6e7273895b7974581"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.arm-linux-gnueabihf.tar.gz"
 [[Ncurses]]
 arch = "i686"
-git-tree-sha1 = "aef8e0bb0ef15c49e778cf53775eb0dd05835e46"
+git-tree-sha1 = "d5c8c9e5307684fa19c6e8150b878be26451a04d"
 libc = "musl"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "07c65b5b0832c4fcb0fdcd2c66ebb2b6d6e4fa6cf1ea364719902c698e984a16"
+    sha256 = "3cf092f3d0a0f862adc17fe26ff0ae72834effda8cc56c1057453017bc646125"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.i686-linux-musl.tar.gz"
 [[Ncurses]]
 arch = "armv7l"
-git-tree-sha1 = "d139aaf4188d24c06570aa38d9e3f85625035588"
+git-tree-sha1 = "8df8966ff8650781339ac708e420796134de78b6"
 libc = "musl"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "e9fa6d4ec937c6385c6aa0dbff78cbb8e247e8c43dd4487a5fd51483d7a2b47e"
+    sha256 = "40107dc5a34619ddf51f86e3554c01f57fd4fc135a0def40cd647e83fd54d036"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.arm-linux-musleabihf.tar.gz"
 [[Ncurses]]
 arch = "aarch64"
-git-tree-sha1 = "6c32d9c1802ed77954f40ae938b9650a9d3cc4bc"
+git-tree-sha1 = "e10348b25abcdf073af0a7caf7e0818641eed8d0"
 libc = "glibc"
 os = "linux"
 
     [[Ncurses.download]]
-    sha256 = "3c9912e3dbe4c2ece25f2c7ae4e7ea2d6028eb218e73ff7883b7b09989cc4308"
+    sha256 = "e9c03b01b7ee6a541c1739c6481566f4a86f580d76c62d816008e97cf802f7e2"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.aarch64-linux-gnu.tar.gz"
 [[Ncurses]]
 arch = "i686"
-git-tree-sha1 = "35d3f98903e9652b7c87bcd5077cbfbaf6b92209"
+git-tree-sha1 = "82f185405692befab36ca569e86db906490f0b1f"
 os = "windows"
 
     [[Ncurses.download]]
-    sha256 = "e9a51c1938bb314d1e6a0447f6df8b886d8e1f5b2b10c89421a9105ee0aa4704"
+    sha256 = "f221af285462ab734ffce2a092250503f0ab6d4f2d28c7a13e9f713471b039e4"
     url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.1.0+1/Ncurses.v6.1.0.i686-w64-mingw32.tar.gz"
