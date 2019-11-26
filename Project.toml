@@ -1,6 +1,6 @@
 name = "Ncurses_jll"
 uuid = "68e3532b-a499-55ff-9963-d1c0c0748b3a"
-version = "6.1.0+1"
+version = "6.1.0+2"
 
 [deps]
 Gettext_jll = "78b55507-aeef-58d4-861c-77aaff3498b1"
