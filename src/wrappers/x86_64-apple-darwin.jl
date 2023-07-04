@@ -33,4 +33,14 @@ function __init__()
     )
 
     JLLWrappers.@generate_init_footer()
+    if Sys.isunix()
+    path = joinpath(artifact_dir, "share", "terminfo")
+    old = get(ENV, "TERMINFO_DIRS", nothing)
+    if old === nothing
+        ENV["TERMINFO_DIRS"] = path
+    else
+        ENV["TERMINFO_DIRS"] = old * ":" * path
+    end
+end
+
 end  # __init__()
