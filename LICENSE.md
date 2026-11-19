@@ -1,14 +1,6 @@
-The Julia source code within this repository (all files under `src/`) are
-released under the terms of the MIT "Expat" License, the text of which is
-included below.  This license does not apply to the binary package wrapped by
-this Julia package and automatically downloaded by the Julia package manager
-upon installing this wrapper package.  The binary package's license is shipped
-alongside the binary itself and can be found within the
-`share/licenses/Ncurses` directory within its prefix.
-
 MIT License
 
-Copyright (c) 2020
+Copyright (c) 2024
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,3 +19,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+

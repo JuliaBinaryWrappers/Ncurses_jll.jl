@@ -1,0 +1,1374 @@
+version = "6.6.1"
+format_version = "1.0"
+name = "Ncurses"
+julia_compat = "1.6"
+platform_augmentation_code = ""
+
+[[builds]]
+name = "Ncurses"
+platform = "x86_64-linux-gnu"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:f1ce89e8565d64f3a9a2eaea5024712994c38fa6"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:5a99ad6e5276af33cd223095749f2da795aa254dc4f5d588d13596d6e81cedb9"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.x86_64-linux-gnu.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:44b854a56da248c0c7be51f134f5d7b4417b42c0"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:63b371bb5ce0fac11e6f89cbec8d8add72c7b48570062514b9479d44aca70d65"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.x86_64-linux-gnu.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:57b7bb5e75c2a661367958bab4bf8efb66d0cb40"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:e5af12d92caea56052d9005f5e6750880d122838339f1a5fd132f7328e303e99"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.x86_64-linux-gnu.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "i686-linux-gnu"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:6a8163c40f7ea0535eadc2968acc4a9bf20b81d5"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:2102103e98c028804e2a56415745e4c1069854c0399572593651ce3d03ca8ab7"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.i686-linux-gnu.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:eed86d8d8bed7e1c744ce6b89f6b455193408631"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:712afd0f1733f96e29a28d8a791a832ffa5e9495d461342255d058d6c9f58e94"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.i686-linux-gnu.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:76cc756c817da5e6b64f394f1b5c80df9c974c6f"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:1e34d0747084ba27545a95b5fddddf2da169beaa9245fe3bac35e22ad148aba6"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.i686-linux-gnu.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "aarch64-linux-gnu"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:7a3eade470cbad393866ad00730f989768d30aa3"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:c491e668771a769d482254b81ce7458146f8731b363b9f78454e5935734a4015"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.aarch64-linux-gnu.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:0fba710bf0ef43606584847cabe0dfb102ffb7b4"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:d8ac0eaa9662a532e70bf01925d83246f6e93ce5aa65d05ebd747c081f9d3fae"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.aarch64-linux-gnu.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:09bed2811c1f08a091f4031dfaafb36312ea3ba2"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:f7293b843105917bbf8086917c6c1770a0483f9f2cf5fa72699123722647f279"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.aarch64-linux-gnu.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "armv6l-linux-gnueabihf"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:e25c844ec60659fb4b949440ff4283c36fd81b7d"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:2b9333d5f0771740190febc8c8a24d09ca8bbeb063d4a720981879a14cee88bc"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.armv6l-linux-gnueabihf.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:4e36eb0059f58aae5d40e22dd3d56ccdbec4e99d"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:408bdc9948840a900e5b2b25388cceba4d91b6b470f18f70dad78a5fc49a63ad"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.armv6l-linux-gnueabihf.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:088ed78aae5e41b6cb9aee2db6c7ce48f698d7a9"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:25cac629e22767ccaace8653c088f2217abd70a85a46264b25010dd752504071"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.armv6l-linux-gnueabihf.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "armv7l-linux-gnueabihf"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:0006cf2cda4cb6b44f08283963fe0d7facc718ec"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:b4e6a8d1925a0887c912de0a9aace046b3ee35b7f8c6a299f1474f3c9bfdbd24"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.armv7l-linux-gnueabihf.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:b6b8176f9d88d51ef184f4deac8bdbd7d5c5cdcc"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:1fff8aaee3c939827a55ca17d0594e61477063a5697b467af634e26a1a5b4dad"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.armv7l-linux-gnueabihf.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:7e4fcb9d893fa96ad66e08e43e782b0982eb5e5d"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:36924a176b55c56d2e0d5b52e93347b0b4dc3c3c63eeeadafa9646d6afb4cdc9"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.armv7l-linux-gnueabihf.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "powerpc64le-linux-gnu"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:d8613445ce5ef797ea3033411ac85ceaf096aa1f"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:f783474ece5348392223c16e7880b8aa083d0e4e9e9cfd044ff04e5a8fbc08d2"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.powerpc64le-linux-gnu.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:4940ef5f09dc7783326aefcf579aab2b24da46a0"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:f29f6eb86285e6612b6c1398b2b0ca8919b233eec81e4b08aacb85ae8b8902cf"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.powerpc64le-linux-gnu.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:fab3f30d8ac18efde17c1f3fc3836dd49fc7a2ef"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:f65ebbcb87b6bce122f42d982e8ae8150f694af6ad79b859df6e1683f4a9be9f"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.powerpc64le-linux-gnu.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "riscv64-linux-gnu"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:9edb7bbdd8eb0bfb31690bffdd1b8a657bf3b5d2"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:82a4fea114a596fb86221e5bd9d8944153cf4bffdbd6f9018f0c0b1e967b9735"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.riscv64-linux-gnu.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:a98e084c07fc0fa8e6d91be8fa3feb7aa257379d"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:5fdf8616e14184f05698eb83011db760dda893e94cf1dc1b86ce0a976c65ace7"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.riscv64-linux-gnu.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:c115ad00265396b10d473e237d8bc21b0a9ea73e"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:09838516433654521603f603f8591b2285258a680bdc6ea5adf1c7557c469a78"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.riscv64-linux-gnu.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "x86_64-linux-musl"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:f63a06fde62a9a8f399bbf32653e3751823cb54e"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:99cf04991d6cadd173b6747230edb7e2427725e4b61e756c31e0a092e887b51f"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.x86_64-linux-musl.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:cc3e8de6daca85d6da2ba1ad2f41487937c2c4ed"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:41827145ccb0d447e9bdf2f1113ce2fb57a18001c54efe2167465c9aa6ae7db5"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.x86_64-linux-musl.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:955a43b248422d96c76265e24991b94aa8504bb6"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:587033c162f024fe90054df2aacf217bb0ef54710cefd67be31d2df5e13f6b4e"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.x86_64-linux-musl.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "i686-linux-musl"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:c7aca69dff597def815c9073722801da634c43bc"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:9fcb9463540759cd34dd90d4ac76ba1c75f67c9027925b15005e8ee5155b7436"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.i686-linux-musl.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:07d5aa8f807f5608685c0a0d4678e327fd14fddd"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:6e2faa180e40a2c485f6adc7c9b0fc2515e7616d8aafcdc8ece2efe9266e4916"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.i686-linux-musl.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:f6ecef9db412672b909ef528d5dd78778ba49500"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:7f951638840d8e62070c0917aedde18f56260aba08083dad7533687be57d6646"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.i686-linux-musl.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "aarch64-linux-musl"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:5294c32ab4d0c39d0cac34134b869fb86e648bdc"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:0c896687209986b199f7ba859841439b70575c29194705c1b34237392e6f0555"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.aarch64-linux-musl.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:510a34fec90d2dbd0a34d051410b75125b0bcaf1"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:1e0adeb3db2c6c297065ceb756d43afc9ec5d49573b98e91f78fd53ce363e43b"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.aarch64-linux-musl.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:d632b058adc3fda68616926265a07d5bd144cc83"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:3ec72539480abf0aaa503b2f5f76d51127b7a8212e0a0b4a99e8fda90749fef5"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.aarch64-linux-musl.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "armv6l-linux-musleabihf"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:370ab04a037b29f04c55d4a12e5e5dbdaf47324b"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:4eb3801ef7de23a47a203794301af86e3bd1d3b2a412a554839bbe8dea8c949f"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.armv6l-linux-musleabihf.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:50ba7bf244cab74f4c059020cfacddfc81f7e781"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:49f96edac529c27100bc50a1b1be5e61254796a502cc4317f936051f39a9ce25"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.armv6l-linux-musleabihf.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:4caec903648cd639acec5d0df88563676c85911b"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:ef7265fc131f424df56808479767b2a3738b8834d9f76cb35773d1099d716efd"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.armv6l-linux-musleabihf.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "armv7l-linux-musleabihf"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:052791c4d787d8c744059e4396adee4ddebaa549"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:b0a3dd5be917e757b57e32f7a484a23cdcded001b824c523bac39eefe59d1519"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.armv7l-linux-musleabihf.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:14567e40ded8b80cb62dd7445d8a023abc32cc6a"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:0b2b6cb51bbe0ba42801e70a22a00051783af50c89a3e6715d56533fe84ff065"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.armv7l-linux-musleabihf.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:73899284864280795d88d67d7f20880319419585"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:88e8d8251e2b1305a0da03213e7d7645b77fb21acc1f573baa67faa9551d5bc3"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.armv7l-linux-musleabihf.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "x86_64-w64-mingw32"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:9e06a80fd11702ce31629b3b0e6c5d307fa14d53"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:753bd7d028f2f67994d573a516b5443c4f1fb51882fd93db0309e954a2da623c"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.x86_64-w64-mingw32.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libformw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libmenuw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libncursesw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw6.dll"
+    system_deps = ["kernel32", "msvcrt", "user32", "winpthread"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libpanelw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:1598a2bd61457f7ef8f156ac2006c425e62019b6"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:1f8aaa15d9252f39995ee8518c2b11d9fcd24b70fae823e839ba762d552c9a0b"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.x86_64-w64-mingw32.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:614ba8dde5d48004a8df18b0bb6e50a8ca3e0e77"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:e050fb5a7e866775cb96a06bc1bc149f5fa44702fb895df3ae2eaf947e8d1ef2"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.x86_64-w64-mingw32.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "i686-w64-mingw32"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:07ed0c698b4ecdbc19aac9b03026c99a7a90ff42"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:af16fd633407aa6b4562368aac7eb553bd275d98c9595f21fd144c9d49e895bb"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.i686-w64-mingw32.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libformw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libmenuw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libncursesw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw6.dll"
+    system_deps = ["gcc_s", "kernel32", "msvcrt", "user32", "winpthread"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "bin/libpanelw6.dll"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw6.dll"
+    system_deps = ["kernel32", "msvcrt"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:1737b8b776fd6527318f681ef6a96e2bba1e779c"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:8fb0909002c05e4293614b614ab0cdec583b3d97181119c665bc944a84b2d29d"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.i686-w64-mingw32.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:67a01b59b7fd1a3d3a781fa199716992ed20a71d"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:d96df50b59753a71ab39571b56c489618df016dc927040b6231aacda22744d72"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.i686-w64-mingw32.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "x86_64-apple-darwin20"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:350bfb3af1a7018ff2f77352b2822c239a29d9d9"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:3660fcd26156c063a244c0fba77069a8f2bf87b86423226b41094caca103963f"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.x86_64-apple-darwin20.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "@rpath/libformw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "@rpath/libmenuw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "@rpath/libncursesw.6.dylib"
+    system_deps = ["System"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "@rpath/libpanelw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:e34caa3a0e1074ac3c0b52271885281957fec9cd"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:af22f82d3e966e5a75f987f4d4597fec4633613db436be1954eac59d1707f7e7"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.x86_64-apple-darwin20.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:3d45f86be06d8c0c644a24aa24b0fbfbdfdca24c"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:173975774e0503fc4c38bef8df2de2c39c5355995c30ef455028672fb74fad6e"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.x86_64-apple-darwin20.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "aarch64-apple-darwin20"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:43d94fc4e3b88cbf723ee9f3377851bf7f7b2115"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:b0aeeb98094ce3be673570621032c7b625f0a9a4bf0adc3e2af9c8dfddc25c95"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.aarch64-apple-darwin20.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "@rpath/libformw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "@rpath/libmenuw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "@rpath/libncursesw.6.dylib"
+    system_deps = ["System"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.6.dylib"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "@rpath/libpanelw.6.dylib"
+    system_deps = ["System"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:068b3d392a387cede39097c16fc9609372fe0c95"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:2e680d0644a02f40b52955f776bba3a39aa1d1e6b39326904fb3be09980eb550"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.aarch64-apple-darwin20.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:5cf1580c907242718e23d8c1b6bd54194fd465d5"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:6e1ec2695032a6e9caa6bff67ce20b584a27d7bbe44ed109169382a3221802fd"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.aarch64-apple-darwin20.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "x86_64-unknown-freebsd14.1"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:c6f6b00139cef110b896f04440ed553c9212c0d1"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:2038037afbb4b57bc51401902f0c4300b5a6b331b56b2dc73ebc9de9c31bdea7"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.x86_64-unknown-freebsd14.1.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:38dce0c53932dc95ae8133b938d03f5c83836304"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:d00a9c53425a650eb7359708a46c5133f03fe1ac02ade3c96cca7c766a8130f7"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.x86_64-unknown-freebsd14.1.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:c4b5629a8a5c4e79f308c4ea6bd9d033a27bc223"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:84c775a76dbd7254ff5424ce375f06c9789b1101d4cd80ff48c044467bb449cb"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.x86_64-unknown-freebsd14.1.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
+[[builds]]
+name = "Ncurses"
+platform = "aarch64-unknown-freebsd14.1"
+init_def = """if Sys.isunix()\n    path = joinpath(artifact_dir, \"share\", \"terminfo\")\n    old = get(ENV, \"TERMINFO_DIRS\", nothing)\n    if old === nothing\n        ENV[\"TERMINFO_DIRS\"] = path\n    else\n        ENV[\"TERMINFO_DIRS\"] = old * \":\" * path\n    end\nend\n"""
+deps = []
+lazy = "false"
+src_version = "6.6.0"
+
+    [builds.artifact]
+    treehash = "sha1:2e7bf5881f6ce036f72614c657b86743baae7b6b"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:778777e4a0edd32484d18a4b361de0125b79eaa6d8260587717a353e0ab0d094"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses.v6.6.1.aarch64-unknown-freebsd14.1.tar.gz"
+
+    [[builds.licenses]]
+    filename = "COPYING"
+    license_text = """Copyright 2018-2024,2025 Thomas E. Dickey\nCopyright 1998-2017,2018 Free Software Foundation, Inc.\n\nPermission is hereby granted, free of charge, to any person obtaining a\ncopy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, distribute with modifications, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included\nin all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\nOR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE ABOVE COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,\nDAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR\nOTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR\nTHE USE OR OTHER DEALINGS IN THE SOFTWARE.\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the\nsale, use or other dealings in this Software without prior written\nauthorization.\n\n-- vile:txtmode fc=72\n-- $Id: COPYING,v 1.14 2025/01/04 10:53:46 tom Exp $\n"""
+
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libformw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libform"
+    soname = "libformw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libmenuw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libmenu"
+    soname = "libmenuw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libncursesw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libncursesw"
+    soname = "libncursesw.so.6"
+    system_deps = ["c"]
+    deps = []
+    aliases = ["libncurses"]
+    [[builds.products]]
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    path = "lib/libpanelw.so.6.6"
+    linkage = "dynamic"
+    type = "library"
+    name = "libpanel"
+    soname = "libpanelw.so.6"
+    system_deps = ["c"]
+    deps = ["libncursesw"]
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:b5c333aa9d131cdb63c9fcce4a4be8e3ba70a2a2"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:d720a870412803cf39cab4203c99b67ea947d80e57aedc3317590aeb66f1991b"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-extract_log.v6.6.1.aarch64-unknown-freebsd14.1.tar.gz"
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:fcdd6e94f295487dc6318cad95e1bf943700e256"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:b06c7f2fa3cdbc57e76a34e16ea88170d5d26e997fb1ca16614080136185896f"
+        url = "https://github.com/JuliaBinaryWrappers/Ncurses_jll.jl/releases/download/Ncurses-v6.6.1/Ncurses-build_log.v6.6.1.aarch64-unknown-freebsd14.1.tar.gz"
+
+    [[builds.sources]]
+    treehash = "sha1:5ada96d8f2052ff9a91a5b31ab0e20e6e82debbf"
+    url = "https://ftpmirror.gnu.org/ncurses/ncurses-6.6.tar.gz"
+
+    [builds.callback_defs]
